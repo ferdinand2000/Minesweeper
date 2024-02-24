@@ -1,11 +1,30 @@
 import java.util.Random;
 public class Bombs {
-//    private int X;
-//    private int Y;
-//
-//    X = new Random(10);
-//    Y = new Random(10);
+    private String difficulty;
+    private int [][] location ={};
+    private int boardSize;
+
+    public Bombs(String df){
+        difficulty = df;
+    }
+    public String getDifficulty() {
+        return difficulty;
+    }
+
+    public int gameSize(){
+        if(difficulty == "easy") {
+            boardSize = 6;
+            return boardSize;
+        }
+        else if(difficulty == "normal"){
+            boardSize = 8;
+            return boardSize;
+        }
+        else {
+            boardSize = 12;
+            return boardSize;
+        }
+
+    }
+
 }
-//public static void main(String[] arg){
-////    GUI();
-//}
